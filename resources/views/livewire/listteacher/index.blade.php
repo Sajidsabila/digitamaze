@@ -5,7 +5,7 @@
             <p class="fw-4 font-bold">Pilih Kelas Untuk Melihat Data</p>
             <label for="kelas_id">Pilih Kelas</label>
             <select wire:model.live="kelas_id" id="kelas_id" class="form-control">
-                <option value="" selected disabled>Pilih Kelas</option>
+                <option value="" selected>Pilih Kelas</option>
                 @foreach ($kelass as $kelas)
                     <option value="{{ $kelas->id }}">{{ $kelas->class }}</option>
                 @endforeach
