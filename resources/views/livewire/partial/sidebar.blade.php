@@ -32,16 +32,33 @@
                <div class="bg-white py-2 collapse-inner rounded">
                    <a class="collapse-item {{ request()->routeIs('user') ? 'active' : '' }}"
                        href="{{ route('user') }}">User</a>
-                   <a class="collapse-item {{ request()->routeIs('student') ? 'active' : '' }}"
-                       href="{{ route('student') }}">Murid</a>
                    <a class="collapse-item {{ request()->routeIs('teacher') ? 'active' : '' }}"
                        href="{{ route('teacher') }}">Guru</a>
                    <a class="collapse-item {{ request()->routeIs('kelas') ? 'active' : '' }}"
                        href="{{ route('kelas') }}">Kelas</a>
+                   <a class="collapse-item {{ request()->routeIs('student') ? 'active' : '' }}"
+                       href="{{ route('student') }}">Murid</a>
                </div>
            </div>
        </li>
-
+       <li class="nav-item {{ request()->routeIs('list.student') ? 'active' : '' }}">
+           <a href="{{ route('list.student') }}" class="nav-link">
+               <i class="fas fa-fw fa-tachometer-alt"></i>
+               <span>List Siswa</span>
+           </a>
+       </li>
+       <li class="nav-item {{ request()->routeIs('list.teacher') ? 'active' : '' }}">
+           <a href="{{ route('list.teacher') }}" class="nav-link">
+               <i class="fas fa-fw fa-tachometer-alt"></i>
+               <span>List Guru</span>
+           </a>
+       </li>
+       <li class="nav-item {{ request()->routeIs('list.data') ? 'active' : '' }}">
+           <a href="{{ route('list.data') }}" class="nav-link">
+               <i class="fas fa-fw fa-tachometer-alt"></i>
+               <span>Data</span>
+           </a>
+       </li>
        <!-- Divider -->
        <hr class="sidebar-divider d-none d-md-block">
 

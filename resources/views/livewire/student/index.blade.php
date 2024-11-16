@@ -59,8 +59,7 @@
                                         onclick="if(confirm('Apakah Anda yakin ingin menghapus data ini?')) { @this.call('deleteStudent', {{ $student->id }}) }">
                                         Delete
                                     </button>
-                                    <button type="button" class="btn btn-danger ms-4"
-                                        wire:click="deleteStudent({{ $student->id }})">Delete</button>
+
                                 </div>
 
 

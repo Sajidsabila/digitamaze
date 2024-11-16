@@ -3,7 +3,10 @@
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
 use App\Livewire\Dashboard\DashboarComponent;
+use App\Livewire\Data\DataComponent;
 use App\Livewire\Kelas\Detail;
+use App\Livewire\Liststudent\ListStudentComponent;
+use App\Livewire\Listteacher\ListTeacherComponent;
 use App\Livewire\Profil\Index;
 use App\Livewire\User\UserComponent;
 use Illuminate\Support\Facades\Route;
@@ -30,11 +33,14 @@ Route::middleware('guest')->group(function () {
 
 
 Route::middleware('auth')->group(function () {
+    Route::get('/', DashboarComponent::class)->name('dashboard');
     Route::get('/student', StudentComponent::class)->name('student');
     Route::get('/teacher', TeacherComponent::class)->name('teacher');
     Route::get('/kelas', KelasComponent::class)->name('kelas');
     Route::get('/user', UserComponent::class)->name('user');
     Route::get('/kelas/{id}', Detail::class)->name('detail.kelas');
     Route::get('/profile', Index::class)->name('profile');
-    Route::get('/Dashboard', DashboarComponent::class)->name('dashboard');
+    Route::get('/list-students', ListStudentComponent::class)->name('list.student');
+    Route::get('/list-teacher', ListTeacherComponent::class)->name('list.teacher');
+    Route::get('/list-data', DataComponent::class)->name('list.data');
 });

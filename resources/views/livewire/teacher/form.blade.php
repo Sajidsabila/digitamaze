@@ -56,7 +56,7 @@
                         <label for="gender" class="form-label">Jenis Kelamin</label>
                         <select class="form-control @error('gender') is-invalid @enderror" id="gender"
                             wire:model.defer="gender">
-                            <option disabled selected>Silahkan Pilih</option>
+                            <option value="" disabled selected>Silahkan Pilih</option>
                             <option value="Laki - laki">Laki - laki</option>
                             <option value="Perempuan">Perempuan</option>
                         </select>

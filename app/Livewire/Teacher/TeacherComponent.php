@@ -128,7 +128,7 @@ class TeacherComponent extends Component
                 ->orWhere('nip', 'like', '%' . $this->search . '%');
         })
             ->orderBy('created_at', 'desc')
-            ->paginate(1);
+            ->paginate(10);
         return view('livewire.teacher.index', compact('teachers', ));
     }
 }

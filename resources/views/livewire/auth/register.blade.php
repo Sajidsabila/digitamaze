@@ -51,10 +51,11 @@
                               @enderror
                           </div>
 
-                          <button type="submit" class="btn btn-primary w-100 py-2">Login</button>
+                          <button type="submit" class="btn btn-primary w-100 py-2">Sign Up</button>
                       </form>
                       <div class="mt-4 text-center">
-                          <p class="mb-0">Don't have an account? <a href="#" class="text-primary">Sign Up</a>
+                          <p class="mb-0"> have an account? <a href="{{ route('login') }}" class="text-primary">Log
+                                  In</a>
                           </p>
                       </div>
                   </div>

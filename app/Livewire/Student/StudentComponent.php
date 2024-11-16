@@ -138,7 +138,7 @@ class StudentComponent extends Component
         })
             ->with('kelas')
             ->orderBy('created_at', 'desc')
-            ->paginate(1);
+            ->paginate(10);
         $kelas = Kelas::all();
         return view('livewire.student.index', compact('students', 'kelas'));
     }
